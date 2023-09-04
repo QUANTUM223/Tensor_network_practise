@@ -8,21 +8,8 @@ from netket.utils.types import Array
 
 from args import args
 
-
-def ensure_dir(filename):
-    dirname = os.path.dirname(filename)
-    if dirname:
-        try:
-            os.makedirs(dirname)
-        except OSError:
-            pass
-
-
-def init_out_dir():
-    if not args.full_out_dir:
-        return
-    ensure_dir(args.full_out_dir)
-
+ 
+ 
 
 def leaf_size_real_nonzero(x):
     if not isinstance(x, get_args(Array)):
